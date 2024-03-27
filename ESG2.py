@@ -132,7 +132,7 @@ def calcular_similaridade(frase_de_entrada, df, ods_selecionadas=None):
                         "Data": df.at[row, 'Carimbo de data/hora'],
                         "Nome": df.at[row, 'Nome e sobrenome'],
                         "UF": df.at[row, 'Estado (UF) que originou a ideia:'],
-                        "Iniciativa": df.at[row, 'Você poderia compartilhar conosco o embrião da sua ideia, mesmo que ainda não esteja totalmente estruturada?'],
+                        "Ideia": df.at[row, 'Ideia'],
                         "Grau de Similaridade": f"{similaridade_celula * 100:.2f}"
                     }
                     resultados.append(resultado)
@@ -141,7 +141,7 @@ def calcular_similaridade(frase_de_entrada, df, ods_selecionadas=None):
 
     return resultados
 
-st.title("Pré-Ideiando 💡")
+st.title("Análise de Similaridade do Pré-Ideiando 💡")
 frase_de_entrada = st.text_input("Digite um Ideia (ou 'sair' para encerrar): ")
 
 if frase_de_entrada.lower() == 'sair':
@@ -160,7 +160,7 @@ if frase_de_entrada:
             linha = resultado['Linha']
 
             if linha not in linhas_filtradas:
-                st.subheader(f" {resultado['Coluna']}: {resultado['Iniciativa']}")
+                st.subheader(f" {resultado['Coluna']}: {resultado['Ideia']}")
                 st.write(f"**Data:** {resultado['Data']}")
                 st.write(f"**Nome:** {resultado['Nome']}")
                 st.write(f"**UF:** {resultado['UF']}")
