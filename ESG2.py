@@ -93,7 +93,7 @@ gc = gspread.service_account_from_dict(gc_credentials)
 planilha_url = st.secrets['google_sheets']['planilha_url']
 dados = gc.open_by_url(planilha_url).worksheet('Respostas ao formulário 1')
 colunas = dados.get_all_values()
-colunas_selecionadas = ['Carimbo de data/hora', 'Aviso de privacidade de dados - Declaro estar ciente e autorizo a coleta das informações para este formulário.', 'Nome e sobrenome', 'Estado (UF) que originou a ideia:', 'Você poderia compartilhar conosco o embrião da sua ideia, mesmo que ainda não esteja totalmente estruturada?']
+colunas_selecionadas = ['Carimbo de data/hora', 'Aviso de privacidade de dados - Declaro estar ciente e autorizo a coleta das informações para este formulário.', 'Nome e sobrenome', 'Estado (UF) que originou a ideia:', 'Ideia']
 
 df = pd.DataFrame(data=dados.get_all_values(), columns=colunas[0])[colunas_selecionadas]
 tfidf_vectorizer = TfidfVectorizer(stop_words='english')
