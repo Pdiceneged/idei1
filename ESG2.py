@@ -177,7 +177,7 @@ if frase_de_entrada:
             linha = resultado['Linha']
 
             if linha not in linhas_filtradas:
-                st.subheader(f" {resultado['Coluna']}: {resultado['Você poderia compartilhar conosco o embrião da sua ideia, mesmo que ainda não esteja totalmente estruturada? ']}")
+                st.subheader(f" {resultado['Coluna']}: {resultado['Você poderia compartilhar conosco o embrião da sua ideia, mesmo que ainda não esteja totalmente estruturada?']}")
                 st.write(f"**Descrição:** {resultado['Carimbo de data/hora']}")
                 st.write(f"**Objetivo:** {resultado['Nome e sobrenome']}")
                 st.write(f"**ODS's atendidas:** {resultado['Estado (UF) que originou a ideia:']}")
