@@ -161,9 +161,9 @@ if frase_de_entrada:
 
             if linha not in linhas_filtradas:
                 st.subheader(f" {resultado['Coluna']}: {resultado['Iniciativa']}")
-                st.write(f"**Data:** {resultado['Carimbo de data/hora']}")
-                st.write(f"**Nome:** {resultado['Nome e sobrenome']}")
-                st.write(f"**UF:** {resultado['Estado (UF) que originou a ideia:']}")
+                st.write(f"**Data:** {resultado['Data']}")
+                st.write(f"**Nome:** {resultado['Nome']}")
+                st.write(f"**UF:** {resultado['UF']}")
                 st.write(f"**Grau de Similaridade:** {resultado['Grau de Similaridade']}%")
                 st.markdown("---")
 
