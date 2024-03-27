@@ -7,7 +7,7 @@ import base64
 
 st.set_page_config(
     page_title="Pré Ideiando",
-    page_icon="🌱"
+    page_icon="💡"
 )
 @st.cache_data()
 def get_img_as_base64(file):
@@ -15,8 +15,8 @@ def get_img_as_base64(file):
         data = f.read()
     return base64.b64encode(data).decode()
 
-img = get_img_as_base64("esgfundo.png")
-img2 = get_img_as_base64("esgfundo.png")
+img = get_img_as_base64("Fundo_Ideian.png")
+img2 = get_img_as_base64("Fundo_Ideian.png")
 
 page_bg_img = f"""
 <style>
@@ -70,7 +70,7 @@ header, footer {{
 """
 
 st.markdown(page_bg_img, unsafe_allow_html=True)
-st.sidebar.image("esgfundo.png", width=250)
+st.sidebar.image("ideiando.png", width=250)
 
 
 sinonimos = {
@@ -141,7 +141,7 @@ def calcular_similaridade(frase_de_entrada, df, ods_selecionadas=None):
 
     return resultados
 
-st.title("Pré-Ideiando 🌱")
+st.title("Pré-Ideiando 💡")
 frase_de_entrada = st.text_input("Digite um Ideia (ou 'sair' para encerrar): ")
 
 if frase_de_entrada.lower() == 'sair':
