@@ -142,7 +142,7 @@ def calcular_similaridade(frase_de_entrada, df, ods_selecionadas=None):
     return resultados
 
 st.title("Análise de Similaridade do Pré-Ideiando 💡")
-frase_de_entrada = st.text_input("Digite um Ideia (ou 'sair' para encerrar): ")
+frase_de_entrada = st.text_input("Digite uma Ideia e veja se já algo similiar existente: ")
 
 if frase_de_entrada.lower() == 'sair':
     st.stop()
